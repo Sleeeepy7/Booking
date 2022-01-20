@@ -11,9 +11,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
-import django_heroku
-import dj_database_url
 
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -95,10 +94,16 @@ WSGI_APPLICATION = 'booking.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+postgres://dippzakowoxdcn:1bb5f897e47e4a20a8803c4cbf339f7227aa16e76597a8adcadab80f4b025abf@ec2-63-34-223-144.eu-west-1.compute.amazonaws.com:5432/d84prf4o557b55
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd84prf4o557b55',
+        'HOST': 'ec2-63-34-223-144.eu-west-1.compute.amazonaws.com',
+        'PORT': 5432 ,
+        'USER': 'dippzakowoxdcn',
+        'PASSWORD': '1bb5f897e47e4a20a8803c4cbf339f7227aa16e76597a8adcadab80f4b025abf'
     }
 }
 
