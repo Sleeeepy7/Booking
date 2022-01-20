@@ -94,7 +94,6 @@ WSGI_APPLICATION = 'booking.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-postgres://dippzakowoxdcn:1bb5f897e47e4a20a8803c4cbf339f7227aa16e76597a8adcadab80f4b025abf@ec2-63-34-223-144.eu-west-1.compute.amazonaws.com:5432/d84prf4o557b55
 
 DATABASES = {
     'default': {
